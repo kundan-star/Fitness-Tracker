@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border:2px solid wheat;
+            border-radius: 40px;
+            background-color: wheat;
+            width:300px;
+            margin: auto;
+            border-width: 10px;
+            box-shadow: -10px -10px 50px;
+            transition: transform 0.3s,box-shadow 0.3s;
+        }
+        fieldset:hover{
+            transform: translateY(20px);
+        }
+        #rh1{
+            margin: auto;
+        }
+        #Sign:hover{
+            background-color: rgb(21, 199, 27);
+        }
+       
+        
+        #choose{
+            background-color: rgb(162, 162, 158);
+        }
+        #about{
+            background-color: rgb(163, 112, 122);
+            border-radius: 5px;
+        }
+        #n1{
+            background-color: rgb(228, 230, 221);
+            border-radius: 3px;
+            width:250px;
+        }
+        #n2{
+            background-color: rgb(222, 224, 214);
+            border-radius: 3px;
+            width:250px;
+        }
+        #n4{
+            background-color: rgb(212, 212, 211);
+            border-radius: 3px;
+            width:250px;
+        }
+    
+        #Sign{
+            width:100px;
+            text-align: center;
+            
+        }
+       
+        #n3{
+            background-color: rgb(214, 215, 209);
+            border-radius: 3px;
+            width:250px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <script>
+        function data()
+        {
+            var a= document.getElementById("n1").value;
+            var b= document.getElementById("n2").value;
+        
+        if (a == ""|| b == "")
+        {
+            alert("all fields are mendatory")
+            return false;
+        }
+        else
+        {
+            true;
+        }
+        }
+    </script>
+
+    <form onsubmit="return data()" action="index.html">
+        <fieldset>
+            <legend><h1>SIGN IN </h1></legend>
+            <label for="name"> User Name:</label>
+            <input type="text" placeholder="name" name="myname" id="n1" required><br><br>
+           
+            <label for="password" >Password:</label>
+            <input type="password" placeholder="password" name="mypassword"  id="n2" required><br><br>
+            
+          <center><input type="submit" value="Sign In " id="Sign"><br></center>
+            <br>
+          
+
+
+        </fieldset>
+        
+    </form>
+</body>
+</html>

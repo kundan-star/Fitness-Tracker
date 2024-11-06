@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            border:2px solid black;
+            border-radius: 40px;
+            background-color: gainsboro;
+            width:300px;
+            margin: auto;
+            border-width: 10px;
+            box-shadow: -10px -10px 50px;
+            transition: transform 0.3s,box-shadow 0.3s;
+        }
+        fieldset:hover{
+            transform: translateY(20px);
+        }
+        #rh1{
+            margin: auto;
+        }
+        #submit:hover{
+            background-color: rgb(21, 199, 27);
+        }
+        #reset:hover{
+            background-color: blue;
+        }
+        #choose{
+            background-color: rgb(162, 162, 158);
+        }
+        #about{
+            background-color: rgb(163, 112, 122);
+            border-radius: 5px;
+        }
+        #n1{
+            background-color: rgb(228, 230, 221);
+            border-radius: 3px;
+            width:250px;
+        }
+        #n2{
+            background-color: rgb(222, 224, 214);
+            border-radius: 3px;
+            width:250px;
+        }
+        #n4{
+            background-color: rgb(212, 212, 211);
+            border-radius: 3px;
+            width:250px;
+        }
+    
+        #submit{
+            width:100px;
+        }
+        #reset{
+            width:100px;
+        }
+        #n3{
+            background-color: rgb(214, 215, 209);
+            border-radius: 3px;
+            width:250px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <script>
+        function data()
+        {
+            var a= document.getElementById("n1").value;
+            var b= document.getElementById("n2").value;
+            var c= document.getElementById("n3").value;
+            var d= document.getElementById("n4").value;
+        
+        if (a == ""|| b == ""|| c == ""|| d == "")
+        {
+            alert("all fields are mendatory")
+            return false;
+        }
+        else if(d.length<10||d.length>10)
+        {
+            alert("number should be of 10 digits only!")
+            return false;
+        }
+        else if(isNaN(d))
+        {
+            alert("only digits are allowed")
+            return false;
+        }
+        else
+        {
+            true;
+        }
+        }
+    </script>
+
+    <form onsubmit="return data()" action="registration form.html">
+        <fieldset>
+            <legend><h1>Regestration Form</h1></legend>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="name" name="myname" id="n1" required><br><br>
+            <label for="email">Email:</label>
+            <input type="text" placeholder="email" name="myemail" id="n2" required><br><br>
+            <label for="password" >Password:</label>
+            <input type="password" placeholder="password" name="mypassword"  id="n3" required><br><br>
+            <label for="number">Number:</label>
+            <input type="number" placeholder="number" name="mynumber" id="n4" required><br><br>
+            <label for="gender">Gender:</label>
+            male<input type="radio" name="mygender">
+            female<input type="radio" name="mygender">
+            other<input type="radio" name="mygender"><br><br>
+            <input type="submit" value="submit now" id="submit">
+            <input type="reset" value="reset" id="reset">
+
+
+        </fieldset>
+        
+    </form>
+</body>
+</html>
